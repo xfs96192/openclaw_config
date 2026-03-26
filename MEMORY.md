@@ -117,11 +117,6 @@
 - **符号链接**: `~/Desktop/ichoice → ~/Desktop/ichoice_data/ichoice`
 - **账号**: xylczh0181 / ef465509
 
-### 两会市场规律（2008-2025，18年数据）
-- 沪深300前1月: 上涨概率 **66.7%**，平均 +2.84%（最佳时机）
-- 沪深300两会期间: 上涨概率仅 **38.9%**，平均 -1.87%（调整期）
-- 10Y国债两会期间: 收益率下行概率 **72.2%**（避险属性）
-
 ### 技术工具
 - matplotlib 已通过 `pip3 install --break-system-packages` 安装
 - himalaya 发邮件时遇到 IMAP Folder 错误，待排查

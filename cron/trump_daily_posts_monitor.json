@@ -1,0 +1,12 @@
+{
+  "name": "trump_daily_posts_monitor",
+  "schedule": "0 * * * *",
+  "timezone": "Asia/Shanghai",
+  "task": "每小时获取 @TrumpDailyPosts 账号最近1小时的新推文。\n\n重要规则：\n1. 只获取最近1小时内发布的推文（根据createdAt时间筛选）\n2. 如果没有新推文（过去1小时内无更新），则不发送任何消息\n3. 避免重复发送已推送过的内容\n4. 记录上次检查的时间戳，只获取在此之后的推文\n\n执行步骤：\n1. 读取上次检查时间戳（从状态文件）\n2. 调用API获取最新推文：\n   curl -s -X POST \"https://ai.6551.io/open/twitter_user_tweets\" \\n     -H \"Authorization: Bearer $TWITTER_TOKEN\" \\n     -H \"Content-Type: application/json\" \\n     -d '{\"username\": \"TrumpDailyPosts\", \"maxResults\": 20, \"product\": \"Latest\", \"includeReplies\": true, \"includeRetweets\": true}'\n3. 筛选createdAt在过去1小时内的推文\n4. 如果筛选结果为空，静默退出，不发送消息\n5. 如果有新推文，格式化后发送（原文+中文翻译）\n6. 更新上次检查时间戳\n\n状态文件路径：/Users/fanshengxia/clawd/cron/.trump_daily_last_check",
+  "delivery": {
+    "mode": "announce",
+    "channel": "openclaw-weixin",
+    "to": "o9cq802mhu_ZgJtHr2xhUd624hZ4@im.wechat",
+    "accountId": "6b82772350c8-im-bot"
+  }
+}

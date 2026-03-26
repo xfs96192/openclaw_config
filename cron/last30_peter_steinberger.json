@@ -1,0 +1,12 @@
+{
+  "name": "last30_peter_steinberger",
+  "schedule": "0 9 * * *",
+  "timezone": "Asia/Shanghai",
+  "task": "使用 last30 skill 检查 Peter Steinberger YouTube 频道的最新视频。频道ID: UCXeqCC0sofRiw7aQNJp6GoA 或搜索 \"Peter Steinberger\"",
+  "delivery": {
+    "mode": "announce",
+    "channel": "openclaw-weixin",
+    "to": "o9cq802mhu_ZgJtHr2xhUd624hZ4@im.wechat",
+    "accountId": "6b82772350c8-im-bot"
+  }
+}

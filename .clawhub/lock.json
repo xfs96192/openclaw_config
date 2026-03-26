@@ -8,6 +8,14 @@
     "opentwitter-mcp": {
       "version": "1.0.0",
       "installedAt": 1772338434064
+    },
+    "last30days-official": {
+      "version": "2.9.3",
+      "installedAt": 1774493045563
+    },
+    "x-search": {
+      "version": "1.0.0",
+      "installedAt": 1774497153085
     }
   }
 }
